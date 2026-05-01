@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from 'react';
 
+import { Button } from '@/components/ui/button';
+
 const words = [
   {
     word: 'Serendipity',
@@ -79,9 +81,9 @@ export default function HomePage() {
         <h2 id="flashcard-title">Vocabulary flashcard</h2>
         <p className="word">{currentWord.word}</p>
         <p className="meaning">{currentWord.meaning}</p>
-        <button type="button" onClick={nextWord}>
+        <Button type="button" onClick={nextWord}>
           Next word
-        </button>
+        </Button>
       </section>
 
       <section className="card" aria-labelledby="quiz-title">
@@ -89,14 +91,15 @@ export default function HomePage() {
         <p>{currentQuestion.prompt}</p>
         <div className="answers">
           {currentQuestion.options.map((option, index) => (
-            <button
+            <Button
               key={option}
               type="button"
               className="answer"
+              variant="secondary"
               onClick={() => handleAnswer(index)}
             >
               {option}
-            </button>
+            </Button>
           ))}
         </div>
         <p className={`feedback ${feedbackType}`} aria-live="polite">
