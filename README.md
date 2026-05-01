@@ -1,6 +1,6 @@
-# English Learning Hub (Next.js)
+# English Learning Hub
 
-This project is now a Next.js web app for learning English with:
+A lightweight web app to help users learn English with:
 
 - Vocabulary flashcards
 - Quick grammar quizzes
