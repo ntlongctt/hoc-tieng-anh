@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Learning Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>English Learning Hub</h1>
+        <p>Build your vocabulary, grammar, and confidence every day.</p>
+      </header>
+
+      <section class="card" aria-labelledby="flashcard-title">
+        <h2 id="flashcard-title">Vocabulary flashcard</h2>
+        <p id="word" class="word">Serendipity</p>
+        <p id="meaning" class="meaning">The occurrence of events by chance in a happy or beneficial way.</p>
+        <button id="next-word" type="button">Next word</button>
+      </section>
+
+      <section class="card" aria-labelledby="quiz-title">
+        <h2 id="quiz-title">Quick grammar quiz</h2>
+        <p id="question"></p>
+        <div id="answers" class="answers"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
