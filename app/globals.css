@@ -1,12 +1,33 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-ring: var(--ring);
+}
+
 :root {
-  color-scheme: light;
-  --bg: #f5f7fb;
+  --background: #f5f7fb;
+  --foreground: #1e293b;
   --card: #ffffff;
-  --text: #1e293b;
-  --accent: #2563eb;
-  --accent-soft: #dbeafe;
-  --success: #15803d;
-  --danger: #b91c1c;
+  --card-foreground: #1e293b;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #dbeafe;
+  --secondary-foreground: #1e293b;
+  --accent: #dbeafe;
+  --accent-foreground: #1e293b;
+  --destructive: #b91c1c;
+  --ring: #2563eb;
 }
 
 * {
@@ -16,8 +37,8 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .app {
@@ -48,20 +69,6 @@ header h1 {
   margin-bottom: 1rem;
 }
 
-button {
-  border: 0;
-  border-radius: 10px;
-  padding: 0.6rem 1rem;
-  cursor: pointer;
-  background: var(--accent);
-  color: white;
-  font-weight: 600;
-}
-
-button:hover {
-  filter: brightness(1.05);
-}
-
 .answers {
   display: grid;
   gap: 0.6rem;
@@ -69,8 +76,7 @@ button:hover {
 
 .answer {
   text-align: left;
-  background: var(--accent-soft);
-  color: var(--text);
+  justify-content: flex-start;
 }
 
 .feedback {
@@ -80,9 +86,9 @@ button:hover {
 }
 
 .feedback.ok {
-  color: var(--success);
+  color: #15803d;
 }
 
 .feedback.bad {
-  color: var(--danger);
+  color: var(--destructive);
 }
